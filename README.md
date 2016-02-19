@@ -8,7 +8,7 @@ Contents
   * [Pixel Block](#pixel-block)
   * [Domain](#domain)
   * [Identifiers](#identifiers)
-  * [Examples](#examples)
+  * [Example](#example)
   * [Best practices](#best-practices)
 
 Overview
@@ -16,7 +16,7 @@ Overview
 
 To use Traverse in email, include the [Pixel Block](pixel-block) in your messages.
 
-Please see the [examples](#examples) and [best practices](#best-practices), below.
+Please see the [example](#example) and [best practices](#best-practices), below.
 
 Pixel Block
 -----------
@@ -44,23 +44,23 @@ For example, if your sending domain is `example.com`, you could create a CNAME r
 Identifiers
 -----------
 
-Different match partners use different hashing schemes. For example, some want the email address converted to uppercase and then hashed via MD5, whereas others want it in uppercase and then hashed via SHA-1.
+Different match partners use different hashing schemes. Most want the email address converted to lowercase before hashing, but some want it hashed via MD5, whereas others want SHA-1.
 
 As such, the following `identifiers` are supported:
 
-| Parameter    | Description | Required |
-| ------------ |------------ | -------- |
-| `emailMd5Lower` | MD5 hash of lowercase email address. | No |
+| Parameter    | Description | *Recommended* |
+| ------------ |------------ | ------------- |
+| `emailMd5Lower` | MD5 hash of lowercase email address. | Yes |
+| `emailSha1Lower` | SHA1 hash of lowercase email address. | Yes |
 | `emailMd5Upper` | MD5 hash of *uppercase* email address. | No |
-| `emailSha1Lower` | SHA1 hash of lowercase email address. | No |
 | `emailSha1Upper` | SHA1 hash of *uppercase* email address. | No |
 
 For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would be `6d881a14e8fb4886b2742f0b4aa10d30`.
 
 To accommodate the greatest number of partners, you should include all four hashing options (MD5/SHA-1 x lowercase/uppercase) whenever possible. However, at minimum, at least specify `emailMd5Lower` for half of your pixels, and `emailSha1Lower` for the other.
 
-Examples
---------
+Example
+-------
 
 Suppose you've set up a [CNAME record](#domain) pointing `traverse.example.com` to `email.traversedlp.com`, and you're sending an email to `foo@BAR.com`.
 
