@@ -44,9 +44,9 @@ For example, if your sending domain is `example.com`, you could create a CNAME r
 Identifiers
 -----------
 
-Different match partners use different hashing schemes. Most want the email address converted to lowercase before hashing, but some want it hashed via MD5, whereas others want SHA-1.
+Our match partners compute hashes using varying schemes. Most want the email address converted to lowercase before hashing, but some want it hashed via MD5 while others want SHA-1.
 
-As such, the following `identifiers` are supported:
+The following `identifiers` are supported:
 
 | Parameter    | Description | *Recommended* |
 | ------------ |------------ | ------------- |
@@ -57,7 +57,7 @@ As such, the following `identifiers` are supported:
 
 For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would be `6d881a14e8fb4886b2742f0b4aa10d30`.
 
-To accommodate the greatest number of partners, you should include all four hashing options (MD5/SHA-1 x lowercase/uppercase) whenever possible. However, at minimum, at least specify `emailMd5Lower` for half of your pixels, and `emailSha1Lower` for the other.
+To accommodate the greatest number of partners, you would include all four `identifiers` in each pixel. However, at minimum, please at least include just `emailMd5Lower` for half of your pixels, and `emailSha1Lower` for the other.
 
 Example
 -------
