@@ -35,14 +35,14 @@ Each generic pixel has the following form:
 | `identifiers` | See [Identifiers](#identifiers), below. | No |
 
 Domain
---------
+------
 
 Our pixels are hosted at `email.traversedlp.com`. However, in order to protect your deliverability, you should serve them from a domain you control, via a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
 
 For example, if your sending domain is `example.com`, you could create a CNAME record for `traverse.example.com` that resolves to `email.traversedlp.com`, and then use that subdomain in the [Pixel Block](#pixel-block).
 
-`Identifiers`
--------------
+Identifiers
+-----------
 
 Different match partners use different hashing schemes. For example, some want the email address converted to uppercase and then hashed via MD5, whereas others want it in uppercase and then hashed via SHA-1.
 
@@ -64,7 +64,7 @@ Examples
 
 Suppose you've set up a [CNAME record](#domain) pointing `traverse.example.com` to `email.traversedlp.com`, and you're sending an email to `foo@BAR.com`.
 
-Include at least 5 pixels with only `emailMd5Lower`, and 5 more with only `emailSha1Lower`, like so:
+Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (notice the changing `index`):
 
 ```
 <img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=0&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
