@@ -21,9 +21,9 @@ Please see the [example](#example) and [best practices](#best-practices), below.
 Pixel Block
 -----------
 
-The Pixel Block is a series of generic pixels that redirect to our match partners' pixels when loaded. This means you don't need to update your integration when partners are added, removed, or change their pixels. We recommend including at least 10 pixels (`index`=0, 1, 2, ..., 9).
+The Pixel Block is a series of generic pixels that redirect to our match partners' pixels when loaded, so that you don't need to update your integration every time partners are added. We recommend including at least 10 pixels.
 
-Each generic pixel has the following form:
+Each pixel has the following form:
  
 > \<img style="border: 0px;" src="http://`domain`/pixel.gif?index=`index`&clientId=`clientId`&`identifiers`"/\>
 
@@ -82,6 +82,6 @@ Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailS
 Best practices
 --------------
 
-1. Always serve the [pixels](#pixel-block) from [a domain you control](#domain).
-2. Only include the [pixels](#pixel-block) in HTML emails.
-3. Always include at least 10 [pixels](#pixel-block): 5 with at least `emailMd5Lower` [`identifiers`](#identifiers), and 5 more with at least `emailSha1Lower`.
+1. Always serve the pixels from [a domain you control](#domain).
+2. Always include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`.
+3. Only include the pixels in HTML emails.
