@@ -25,13 +25,13 @@ The Pixel Block is a series of generic pixels that redirect to our match partner
 
 Each pixel has the following form:
  
-> \<img style="border: 0px;" src="http://`domain`/pixel.gif?index=`index`&clientId=`clientId`&`identifiers`"/\>
+> \<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?identifiers`"/\>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
 | `domain` | See [Domain](#domain), below. | Yes |
-| `index` | Which partner's pixel to serve. | Yes |
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
+| `index` | Which partner's pixel to serve. | Yes |
 | `identifiers` | See [Identifiers](#identifiers), below. | No |
 
 Domain
@@ -67,16 +67,16 @@ Suppose you control example.com, have set up a [CNAME record](#domain) pointing 
 Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (notice the changing `index`):
 
 ```
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=0&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=1&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=2&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=3&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=4&clientId=YOUR-CLIENT-ID-HERE&emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=5&clientId=YOUR-CLIENT-ID-HERE&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=6&clientId=YOUR-CLIENT-ID-HERE&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=7&clientId=YOUR-CLIENT-ID-HERE&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=8&clientId=YOUR-CLIENT-ID-HERE&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/pixel.gif?index=9&clientId=YOUR-CLIENT-ID-HERE&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/5.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/6.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/7.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/8.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/9.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
 ```
 
 Best practices
