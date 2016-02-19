@@ -5,9 +5,9 @@ Contents
 --------
 
   * [Overview](#overview)
-  * [Resource URL](#resource-url)
-  * [`User` object](#user-object)
-  * [`Start` method](#start-method)
+  * [Pixel Block](#pixel-block)
+  * [Domain](#domain)
+  * [Identifiers](#identifiers)
   * [Examples](#examples)
   * [Best practices](#best-practices)
 
@@ -34,7 +34,7 @@ Each generic pixel has the following form:
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
 | `identifiers` | See [Identifiers](#identifiers), below. | No |
 
-`Domain`
+Domain
 --------
 
 Our pixels are hosted at `email.traversedlp.com`. However, in order to protect your deliverability, you should serve them from a domain you control, via a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
