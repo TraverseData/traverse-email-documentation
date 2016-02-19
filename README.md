@@ -44,7 +44,7 @@ For example, if your sending domain is `example.com`, you could create a CNAME r
 Identifiers
 -----------
 
-Our match partners compute hashes using varying schemes. Most want the email address converted to lowercase before hashing, but some want it hashed via MD5 while others want SHA-1.
+Our match partners compute hashes using varying schemes. Most want the email address converted to lowercase before hashing; however, some want it hashed via MD5 whereas others want SHA-1.
 
 The following `identifiers` are supported:
 
