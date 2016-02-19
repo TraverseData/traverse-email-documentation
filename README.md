@@ -82,6 +82,6 @@ Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailS
 Best practices
 --------------
 
-1. Always serve the [Pixel Block](#pixel-block) from [a (sub)domain you control](#domain).
-2. Only include the [Pixel Block](#pixel-block) in HTML emails.
-3. Always include at least 10 pixels: 5 with at least `emailMd5Lower` [`identifiers`](#identifiers), and 5 more with at least `emailSha1Lower`.
+1. Always serve the [pixels](#pixel-block) from [a domain you control](#domain).
+2. Only include the [pixels](#pixel-block) in HTML emails.
+3. Always include at least 10 [pixels](#pixel-block): 5 with at least `emailMd5Lower` [`identifiers`](#identifiers), and 5 more with at least `emailSha1Lower`.
