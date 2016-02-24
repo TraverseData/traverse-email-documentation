@@ -14,7 +14,7 @@ Contents
 Overview
 --------
 
-To use Traverse in email, include our [Pixel Block](pixel-block) in your messages.
+To use Traverse in email, include our [Pixel Block](#pixel-block) in your messages.
 
 Please see the [example](#example) and [best practices](#best-practices), below.
 
