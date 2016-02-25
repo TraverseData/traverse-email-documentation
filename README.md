@@ -25,7 +25,7 @@ The Pixel Block is a series of generic pixels that redirect to our match partner
 
 Each pixel has the following form:
  
-> \<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?identifiers`"/\>
+>\<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?identifiers`"/\>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
