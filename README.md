@@ -63,7 +63,7 @@ For example, if your sending domain is `example.com`, you could create a CNAME r
 Example
 -------
 
-Suppose you control example.com, have set up a [CNAME record](#domain) pointing `traverse.example.com` to `email.traversedlp.com`, and you're sending an email to `foo@BAR.com`.
+Suppose you control `example.com`, have set up a [CNAME record](#domain) pointing `traverse.example.com` to `email.traversedlp.com`, and you're sending an email to `foo@BAR.com`.
 
 Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (*notice the changing `index`*):
 
