@@ -7,7 +7,7 @@ Contents
   * [Overview](#overview)
   * [Pixel Block](#pixel-block)
   * [Domain](#domain)
-  * [Identifiers](#identifiers)
+  * [Hashes](#hashes)
   * [Example](#example)
   * [Best practices](#best-practices)
 
@@ -21,32 +21,26 @@ Please see the [example](#example) and [best practices](#best-practices), below.
 Pixel Block
 -----------
 
-The Pixel Block is a series of generic pixels that redirect to our match partners' pixels when loaded, so that you don't need to update your integration every time partners are added. We recommend including at least 10 pixels.
+The Pixel Block is a series of generic pixels that redirect to specific pixels when loaded, so that you don't need to update your integration every time partners are added. We recommend including at least 10 pixels.
 
 Each pixel has the following form:
  
->\<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?identifiers`"/\>
+>\<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?`hashType`=`hashValue`"/\>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
 | `domain` | See [Domain](#domain), below. | Yes |
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
-| `index` | Which partner's pixel to serve. | Yes |
-| `identifiers` | See [Identifiers](#identifiers), below. | No |
+| `index` | *How many pixels with this hash type came before this one?* | Yes |
+| `hashType` | The [hash](#hashes) type. | Yes |
+| `hashValue` | The [hash](#hashes) value. | Yes |
 
-Domain
+Hashes
 ------
 
-Our pixels are hosted at `email.traversedlp.com`. However, in order to protect your deliverability, you should serve them from a domain you control, via a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+Our match partners expect compute hashes using varying schemes. Most want the email address converted to lowercase before hashing; however, some want it hashed using MD5 whereas others want SHA-1.
 
-For example, if your sending domain is `example.com`, you could create a CNAME record for `traverse.example.com` that resolves to `email.traversedlp.com`, and then use that subdomain in the [Pixel Block](#pixel-block).
-
-Identifiers
------------
-
-Our match partners compute hashes using varying schemes. Most want the email address converted to lowercase before hashing; however, some want it hashed via MD5 whereas others want SHA-1.
-
-The following `identifiers` are supported:
+The following `hashType`s are supported:
 
 | Parameter    | Description | *Recommended* |
 | ------------ |------------ | ------------- |
@@ -57,7 +51,14 @@ The following `identifiers` are supported:
 
 For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would be `6d881a14e8fb4886b2742f0b4aa10d30`.
 
-To accommodate the greatest number of partners, you would include all four `identifiers` in each pixel. However, at minimum, please at least include just `emailMd5Lower` for half of your pixels, and `emailSha1Lower` for the other.
+To accommodate the greatest number of partners, you would include pixels for all four `identifiers`. However, at minimum, you should include pixels for both `emailMd5Lower` and `emailSha1Lower`.
+
+Domain
+------
+
+Our pixels are hosted at `email.traversedlp.com`. However, in order to protect your deliverability, you should serve them from a domain you control, via a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+
+For example, if your sending domain is `example.com`, you could create a CNAME record for `traverse.example.com` that resolves to `email.traversedlp.com`, and then use that subdomain in the [Pixel Block](#pixel-block).
 
 Example
 -------
@@ -72,11 +73,11 @@ Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailS
 <img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
 <img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
 <img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/5.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/6.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/7.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/8.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/9.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
 ```
 
 Best practices
