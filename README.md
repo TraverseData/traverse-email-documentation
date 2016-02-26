@@ -65,7 +65,7 @@ Example
 
 Suppose you control example.com, have set up a [CNAME record](#domain) pointing `traverse.example.com` to `email.traversedlp.com`, and you're sending an email to `foo@BAR.com`.
 
-Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (notice the changing `index`):
+Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (*notice the changing `index`*):
 
 ```
 <img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
