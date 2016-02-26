@@ -1,5 +1,5 @@
-Traverse Email Documentation v1.0:
-----------------------------------
+Traverse Email Documentation
+----------------------------
 
 Contents
 --------
