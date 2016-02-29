@@ -31,7 +31,7 @@ Each pixel has the following form:
 | ------------ |------------ | -------- |
 | `domain` | See [Domain](#domain), below. | Yes |
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
-| `index` | *How many pixels with this hash type came before this one?* | Yes |
+| `index` | How many pixels *with this hash type* came before this one? | Yes |
 | `hashType` | The [hash](#hashes) type. | Yes |
 | `hashValue` | The [hash](#hashes) value. | Yes |
 
