@@ -25,7 +25,7 @@ The Pixel Block is a series of generic pixels that redirect to specific pixels w
 
 Each pixel has the following form:
  
->\<img style="border: 0px;" src="http://`domain`/`clientId`/`index`.gif?`hashType`=`hashValue`"/\>
+>\<img style="border: 0px;" src="http://`domain`/v1/`clientId`/`index`.gif?`hashType`=`hashValue`"/\>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
@@ -68,16 +68,16 @@ Suppose you control `example.com`, have set up a [CNAME record](#domain) pointin
 Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (*notice the changing `index`*):
 
 ```
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img style="border: 0px;" src="http://traverse.example.com/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img style="border: 0px;" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
 ```
 
 Best practices
