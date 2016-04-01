@@ -21,7 +21,7 @@ Please see the [example](#example) and [best practices](#best-practices), below.
 Pixel Block
 -----------
 
-The Pixel Block is a series of generic pixels that redirect to specific pixels when loaded, so that you don't need to update your integration as new partners are added.
+The Pixel Block is a series of generic pixels that redirect to specific pixels when loaded. This way you won't need to update your integration as new partners are added.
 
 Each pixel has the following form:
  
