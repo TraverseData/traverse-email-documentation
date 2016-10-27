@@ -46,7 +46,7 @@ Hashes
 
 Email addresses must be white-space trimmed and converted to lowercase before hashing.
 
-Some partners expect an MD5, but others expect SHA-1, so please provide both:
+Some partners expect an MD5 hash, but others expect SHA-1. In order to maximize revenue, please provide both:
 
 | Parameter    | Description |
 | ------------ |------------ |
