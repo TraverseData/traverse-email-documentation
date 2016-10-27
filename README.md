@@ -70,14 +70,14 @@ Suppose you control `example.com`, have set up a [CNAME record](#domain) pointin
 Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (*notice the changing `index`*):
 
 ```
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
 ```
