@@ -5,23 +5,28 @@ Contents
 --------
 
   * [Overview](#overview)
+  * [Getting started](#getting-started)
   * [Pixel Block](#pixel-block)
   * [CNAME](#cname)
   * [Hashes](#hashes)
   * [Example](#example)
-  * [Best practices](#best-practices)
 
 Overview
 --------
 
+The Traverse Pixel Block allows you to license linkage data from your email campaigns.
+
+Getting started
+---------------
+
 To use Traverse in email, include our [Pixel Block](#pixel-block) in your messages.
 
-Please see the [example](#example) and [best practices](#best-practices), below.
+Please see the [example](#example), below.
 
 Pixel Block
 -----------
 
-The Pixel Block is a series of generic pixels that redirect to specific pixels when loaded. This way you won't need to update your integration as new partners are added.
+The Pixel Block is a set of 10 pixels, each of which redirects to a separate partner, passing them the recipient's hashed email address and allowing them to set a cookie.
 
 Each pixel has the following form:
  
@@ -36,7 +41,7 @@ Each pixel has the following form:
 | `hashValue` | The [hash](#hashes) value. | Yes |
 | `domain` | The recipient's domain. | No |
 
-
+Please see the [example](#example), below.
 
 Hashes
 ------
@@ -54,8 +59,6 @@ The following `hashType`s are supported:
 
 For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would be `6d881a14e8fb4886b2742f0b4aa10d30`.
 
-To accommodate the greatest number of partners, you would include pixels for all four `identifiers`. However, at minimum, you should include pixels for both `emailMd5Lower` and `emailSha1Lower`.
-
 CNAME
 -----
 
@@ -71,21 +74,14 @@ Suppose you control `example.com`, have set up a [CNAME record](#domain) pointin
 Include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`, like so (*notice the changing `index`*):
 
 ```
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
-<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=gmail.com"/>
 ```
-
-Best practices
---------------
-
-1. Always serve the pixels from [a domain you control](#domain).
-2. Always include at least 5 pixels with `emailMd5Lower`, and at least 5 more with `emailSha1Lower`.
-3. Only include the pixels in HTML emails.
