@@ -39,7 +39,7 @@ Each pixel has the following form:
 | `hashValue` | The [hash](#hashes) value. | Yes |
 | `domain` | The recipient's domain. | No |
 
-Please see the [example](#example), below.
+*Please see the [example](#example), below.*
 
 Hashes
 ------
