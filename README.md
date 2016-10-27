@@ -21,8 +21,6 @@ Getting started
 
 To use Traverse in email, include our [Pixel Block](#pixel-block) in your messages.
 
-Please see the [example](#example), below.
-
 Pixel Block
 -----------
 
