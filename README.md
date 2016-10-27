@@ -6,7 +6,7 @@ Contents
 
   * [Overview](#overview)
   * [Pixel Block](#pixel-block)
-  * [Domain](#domain)
+  * [CNAME](#cname)
   * [Hashes](#hashes)
   * [Example](#example)
   * [Best practices](#best-practices)
@@ -25,15 +25,18 @@ The Pixel Block is a series of generic pixels that redirect to specific pixels w
 
 Each pixel has the following form:
  
->\<img border="0" width="1" height="1" src="http://`domain`/v1/`clientId`/`index`.gif?`hashType`=`hashValue`"/\>
+>\<img border="0" width="1" height="1" src="http://`cname`/v1/`clientId`/`index`.gif?`hashType`=`hashValue`&domain=`domain`"/\>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
-| `domain` | See [Domain](#domain), below. | Yes |
+| `cname` | See [CNAME](#cname), below. | Yes |
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
 | `index` | How many pixels *with this hash type* came before this one? | Yes |
 | `hashType` | The [hash](#hashes) type. | Yes |
 | `hashValue` | The [hash](#hashes) value. | Yes |
+| `domain` | The recipient's domain. | No |
+
+
 
 Hashes
 ------
@@ -53,8 +56,8 @@ For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would b
 
 To accommodate the greatest number of partners, you would include pixels for all four `identifiers`. However, at minimum, you should include pixels for both `emailMd5Lower` and `emailSha1Lower`.
 
-Domain
-------
+CNAME
+-----
 
 Our pixels are hosted at `email.traversedlp.com`. However, in order to protect your deliverability, you should serve them from a domain you control, via a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
 
