@@ -44,16 +44,14 @@ Each pixel has the following form:
 Hashes
 ------
 
-Our match partners expect compute hashes using varying schemes. Most want the email address converted to lowercase before hashing; however, some want it hashed using MD5 whereas others want SHA-1.
+All of our partners require email addresses to be white-space trimmed and converted to lowercase before hashing.
 
-The following `hashType`s are supported:
+Some partners expect an MD5, but others expect SHA-1. In order to support both, please provide:
 
-| Parameter    | Description | *Recommended* |
-| ------------ |------------ | ------------- |
-| `emailMd5Lower` | MD5 hash of lowercase email address. | Yes |
-| `emailSha1Lower` | SHA1 hash of lowercase email address. | Yes |
-| `emailMd5Upper` | MD5 hash of *uppercase* email address. | No |
-| `emailSha1Upper` | SHA1 hash of *uppercase* email address. | No |
+| Parameter    | Description |
+| ------------ |------------ |
+| `emailMd5Lower` | MD5 hash of lowercased email address. |
+| `emailSha1Lower` | SHA1 hash of lowercased email address. |
 
 For example, if the email address is `foo@BAR.com`, then `emailMd5Upper` would be `6d881a14e8fb4886b2742f0b4aa10d30`.
 
