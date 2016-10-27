@@ -44,9 +44,9 @@ Each pixel has the following form:
 Hashes
 ------
 
-All of our partners require email addresses to be white-space trimmed and converted to lowercase before hashing.
+Email addresses must be white-space trimmed and converted to lowercase before hashing.
 
-Some partners expect an MD5, but others expect SHA-1. In order to support both, please provide:
+Some partners expect an MD5, but others expect SHA-1, so please provide both:
 
 | Parameter    | Description |
 | ------------ |------------ |
