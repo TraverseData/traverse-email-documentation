@@ -78,7 +78,7 @@ Include at least 10 pixels with the same hashes provided. You can include one or
 <img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/9.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
 ```
 
-__Note__: We still support supplying one hash per pixel and repeating indexes for each hash type. This is not encouraged anymore. Providing all hashes available to each pixel will provide the most revenue. Example:
+__Note__: We continue to support supplying one hash per pixel and repeating indexes for each hash type. This is no longer the preferred method of integration. Providing all hashes available to each pixel allows Traverse to maximize your revenue. Example:
 ```
 <img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
 <img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
