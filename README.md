@@ -37,7 +37,7 @@ Each pixel has the following form:
 | `emailSha256Lower` | SHA256 hash of lowercased email address. | No<sup>*</sup> |
 | `domain` | The recipient's domain. | No |
 
-<sup>*</sup> __Note__: At least one of the forms of hashes is required. Some partners expect an MD5 hash, but others expect SHA-1 or SHA-256. In order to maximize revenue, please provide all of `emailMd5Lower`, `emailSha1Lower`, and `emailSha256Lower`. If unable to provide all, it is important that you use the same hash parameters with each pixel.
+<sup>*</sup> __Note__: At least one of the hash types is required. Some partners expect an MD5 hash, but others expect SHA-1 or SHA-256. In order to maximize revenue, please provide all of `emailMd5Lower`, `emailSha1Lower`, and `emailSha256Lower`. If unable to provide all, it is important that you use the same hash parameters with each pixel.
 
 *Please see the [example](#example), below.*
 
