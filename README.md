@@ -24,7 +24,7 @@ The Pixel Block is a set of at least 10 pixels, each of which redirects to a sep
 Each pixel has the following form:
 
 ```
-<img border="0" width="1" height="1" src="https://{{cname}}/v1/{{clientId}}/{{index}}.gif?emailMd5Lower={{emailMd5Lower}}&emailSha1Lower={{emailSha1Lower}}&emailSha256Lower={{emailSha256Lower}}&domain={{domain}}"/\>
+<img border="0" width="1" height="1" src="https://{{cname}}/v1/{{clientId}}/{{index}}.gif?emailMd5Lower={{emailMd5Lower}}&emailSha1Lower={{emailSha1Lower}}&emailSha256Lower={{emailSha256Lower}}&domain={{domain}}"\>
 ```
 
 | Parameter    | Description | Required |
