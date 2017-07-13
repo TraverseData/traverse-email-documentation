@@ -24,7 +24,7 @@ The Pixel Block is a set of at least 10 pixels, each of which redirects to a sep
 Each pixel has the following form:
 
 ```
-<img border="0" width="1" height="1" src="https://{{cname}}/v1/{{clientId}}/{{index}}.gif?emailMd5Lower={{emailMd5Lower}}&emailSha1Lower={{emailSha1Lower}}&emailSha256Lower={{emailSha256Lower}}&domain={{domain}}"/>
+<img border="0" width="1" height="1" src="http//{{cname}}/v1/{{clientId}}/{{index}}.gif?emailMd5Lower={{emailMd5Lower}}&emailSha1Lower={{emailSha1Lower}}&emailSha256Lower={{emailSha256Lower}}&domain={{domain}}"/>
 ```
 
 | Parameter    | Description | Required |
@@ -66,28 +66,28 @@ Suppose you control `example.com`, have set up a [CNAME record](#domain) pointin
 Include at least 10 pixels with the same hashes provided. You can include one or more of `emailMd5Lower`, `emailSha1Lower`, and `emailSha256Lower` like so (*notice the changing `index`*):
 
 ```
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/5.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/6.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/7.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/8.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/9.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/5.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/6.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/7.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/8.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/9.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&emailSha256Lower=0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b&domain=bar.com"/>
 ```
 
 __Note__: We continue to support supplying one hash per pixel and repeating indexes for each hash type. This is no longer the preferred method of integration. Providing all hashes available to each pixel allows Traverse to maximize your revenue. Example:
 ```
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
-<img border="0" width="1" height="1" src="https://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailMd5Lower=f3ada405ce890b6f8204094deb12d8a8&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/0.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/1.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/2.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/3.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
+<img border="0" width="1" height="1" src="http://traverse.example.com/v1/YOUR-CLIENT-ID-HERE/4.gif?emailSha1Lower=823776525776c8f23a87176c59d25759da7a52c4&domain=bar.com"/>
 ```
